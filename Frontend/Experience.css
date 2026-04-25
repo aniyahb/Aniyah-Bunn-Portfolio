@@ -1,0 +1,219 @@
+/* ==============================
+   EXPERIENCE SECTION
+   Depends on shared.css for:
+   --bg, --surface, --border,
+   --text, --muted, --white
+   Also reuses .section-header,
+   .section-title, .section-sub,
+   and .tag from skills.css
+   ============================== */
+
+.experience {
+  padding: 100px 48px 80px;
+}
+
+/* ── TIMELINE WRAPPER ── */
+.exp-timeline {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Vertical line running down the left */
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 11px;
+  width: 1px;
+  background: var(--border);
+}
+
+/* ── EACH ROW ── */
+.exp-item {
+  display: flex;
+  gap: 28px;
+  position: relative;
+}
+
+/* ── TIMELINE DOT ── */
+.timeline-dot {
+  flex-shrink: 0;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  margin-top: 14px;
+  position: relative;
+  z-index: 1;
+  transition: border-color 0.2s;
+}
+
+.exp-item:hover .timeline-dot {
+  border-color: #555;
+}
+
+/* ── CARD ── */
+.exp-card {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.exp-card:hover {
+  border-color: #3a3a3a;
+  transform: translateX(2px);
+}
+
+/* ── CARD TOP ROW ── */
+.exp-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.exp-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exp-role-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.exp-role {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+
+.exp-company {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-left: 24px;
+}
+
+.company-logo {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.exp-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.exp-dates,
+.exp-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ── DESCRIPTION BOX ── */
+.exp-description {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.exp-description p {
+  font-size: 0.875rem;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+/* ── ACHIEVEMENTS LIST ── */
+.exp-achievements {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exp-achievements li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+/* Small bullet marker */
+.exp-achievements li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--muted);
+  margin-top: 5px;
+}
+
+/* ── TECH TAGS ── */
+/* Reuses .tag from skills.css */
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .experience {
+    padding: 60px 20px;
+  }
+
+  .exp-card-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .exp-card-right {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .exp-timeline::before {
+    left: 9px;
+  }
+
+  .timeline-dot {
+    width: 19px;
+    height: 19px;
+  }
+}
