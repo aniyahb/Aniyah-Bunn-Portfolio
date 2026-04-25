@@ -6,9 +6,9 @@
   <title>Aniyah Bunn Developer — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="shared.css"/>
-  <link rel="stylesheet" href="Homepage.css"/>
-  <link rel="stylesheet" href="Skills.css"/>
-  <link rel="stylesheet" href="Experience.css"/>
+  <link rel="stylesheet" href="./Home/Homepage.css"/>
+  <link rel="stylesheet" href="./Skills/Skills.css"/>
+  <link rel="stylesheet" href="./Experience/Experience.css"/>
 </head>
 <body>
 
@@ -54,12 +54,12 @@
       }
     }
 
-    // Load all sections
-    loadSection('home', 'Homepage.html');
-    loadSection('skills', 'Skills.html');
-    loadSection('experience', 'Experience.html');
-    // loadSection('projects', 'Projects.html');
-    // loadSection('contact', 'Contact.html');
+  
+    loadSection('home', './Home/Homepage.html');
+    loadSection('skills', './Skills/Skills.html');
+    loadSection('experience', './Experience/Experience.html');
+    // loadSection('projects', './Projects/Projects.html');
+    // loadSection('contact', './Contact/Contact.html');
 
     // Theme toggle
     let isDark = true;
