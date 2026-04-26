@@ -1,0 +1,161 @@
+/* ==============================
+   PROJECTS SECTION
+   Depends on shared.css for:
+   --bg, --surface, --border,
+   --text, --muted, --white
+   Reuses .section-header, .section-title,
+   .section-sub, and .tag from skills.css
+   ============================== */
+
+.projects {
+  padding: 100px 48px 80px;
+}
+
+/* ── GRID ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── CARD ── */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+  border-color: #3a3a3a;
+  transform: translateY(-3px);
+}
+
+/* ── IMAGE AREA ── */
+.project-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #1e1e1e;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+
+.project-card:hover .project-img img {
+  transform: scale(1.04);
+}
+
+/* Placeholder shown when no image is provided */
+.project-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2a2a2a, #333);
+  color: #555;
+}
+
+.project-img-placeholder.purple {
+  background: linear-gradient(135deg, #2d1f4e, #5b30a6);
+  color: #9b6dda;
+}
+
+.project-img-placeholder.dark {
+  background: linear-gradient(135deg, #0d1117, #1a2332);
+  color: #2d6a9f;
+}
+
+/* ── CARD BODY ── */
+.project-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.project-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+
+.project-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* ── TAGS ── reuses .tag from skills.css ── */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ── BUTTONS ── */
+.project-btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 7px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.project-btn-outline {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.project-btn-outline:hover {
+  background: #1f1f1f;
+  border-color: #444;
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 60px 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
