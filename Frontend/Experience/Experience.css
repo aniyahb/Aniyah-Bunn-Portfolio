@@ -147,7 +147,7 @@
 
 .exp-description p {
   font-size: 0.875rem;
-  color: #bbb;
+  color: var(--text);
   line-height: 1.7;
 }
 

@@ -58,7 +58,6 @@
       }
     }
 
-  
     loadSection('home', './Home/Homepage.html');
     loadSection('skills', './Skills/Skills.html');
     loadSection('experience', './Experience/Experience.html');
@@ -70,12 +69,12 @@
     let isDark = true;
     function toggleTheme() {
       isDark = !isDark;
-      document.documentElement.style.setProperty('--bg',      isDark ? '#0e0e0e' : '#f5f5f5');
-      document.documentElement.style.setProperty('--surface', isDark ? '#1a1a1a' : '#e5e5e5');
-      document.documentElement.style.setProperty('--border',  isDark ? '#2a2a2a' : '#ccc');
-      document.documentElement.style.setProperty('--text',    isDark ? '#f0f0f0' : '#111');
-      document.documentElement.style.setProperty('--muted',   isDark ? '#888'    : '#555');
-      document.documentElement.style.setProperty('--white',   isDark ? '#ffffff' : '#111111');
+      document.documentElement.style.setProperty('--bg',      isDark ? '#0e0e0e' : '#ffffff');
+      document.documentElement.style.setProperty('--surface', isDark ? '#1a1a1a' : '#f8f8f8');
+      document.documentElement.style.setProperty('--border',  isDark ? '#2a2a2a' : '#e0e0e0');
+      document.documentElement.style.setProperty('--text',    isDark ? '#f0f0f0' : '#0a0a0a');
+      document.documentElement.style.setProperty('--muted',   isDark ? '#888'    : '#666');
+      document.documentElement.style.setProperty('--white',   isDark ? '#ffffff' : '#000000');
     }
   </script>
 

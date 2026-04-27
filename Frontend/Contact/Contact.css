@@ -11,12 +11,12 @@
   padding: 100px 48px 100px;
 }
 
-/* ── TWO-COLUMN LAYOUT ── */
+/* ── LAYOUT ── */
 .contact-layout {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr;
   gap: 24px;
-  max-width: 960px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -73,88 +73,6 @@
 
 .contact-info-value:hover {
   color: var(--white);
-}
-
-/* ── RIGHT: FORM CARD ── */
-.contact-form-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.form-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 4px;
-}
-
-/* ── FORM ELEMENTS ── */
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-row {
-  flex-direction: row;
-  gap: 12px;
-}
-
-.form-input {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 12px 14px;
-  font-size: 0.85rem;
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
-  width: 100%;
-  outline: none;
-  transition: border-color 0.2s;
-  resize: none;
-}
-
-.form-input::placeholder {
-  color: #555;
-}
-
-.form-input:focus {
-  border-color: #444;
-}
-
-.form-textarea {
-  height: 120px;
-  line-height: 1.6;
-}
-
-/* ── SUBMIT BUTTON ── */
-.form-submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 14px;
-  background: var(--white);
-  color: #111;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  font-family: 'DM Sans', sans-serif;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  margin-top: 4px;
-}
-
-.form-submit:hover {
-  background: #e8e8e8;
-  transform: translateY(-1px);
 }
 
 /* ── RESPONSIVE ── */

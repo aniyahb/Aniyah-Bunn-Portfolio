@@ -93,7 +93,7 @@
   border-radius: 6px;
   padding: 5px 12px;
   font-size: 0.78rem;
-  color: #ccc;
+  color: var(--text);
   font-weight: 400;
   transition: border-color 0.2s, color 0.2s;
 }
